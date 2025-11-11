@@ -81,7 +81,7 @@ function dividir() {
 // ---------- Health check al cargar ----------
 function checkHealth() {
   var el = document.getElementById("health-msg");
-  fetch("/api/health")
+  fetch(base+"/health")
     .then(function (r) { 
       if (!r.ok) { throw "API no disponible"; }
       return r.json();
